@@ -1,0 +1,146 @@
+body,html{
+                width:100%;
+                height:100%;
+                font-family: sans-serif;
+				zoom:1.5;
+				background:black;
+            }
+            body{overflow: hidden;color:black;}
+            .user{
+			position:absolute;
+			top:0px;
+			left:0px;
+			
+			width:64px;height:92px;background:red;transition:left 0.5s,top 0.5s;
+			transform:translateX(0px) translateY(0px) rotateX(45deg) rotateY(-35deg) rotateZ(60deg);
+			background:url(sprites2.png);
+			background-repeat:no-repeat;
+			background-size:256px 64px;
+			background-position:64px 0px;
+			text-align:center;
+			}
+			
+            #self{position:absolute;top:50%;left:50%;width:150px;margin-left:-75px;
+			background: none;
+    color: white;
+    border: none;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    text-align: center;
+    animation: loginsale 1s;
+    border-radius: 5px;
+	outline:none;
+			}
+			@keyframes loginsale{
+				0%{width:0px;height:0px;margin-left:0px;}
+				50%{height:20px;width:0px;margin-left:0px;}
+				100%{height:20px;width:150px;margin-left:-75px;}
+			}
+            .self{border:1px solid green;
+			pointer-events:all;
+			
+			}
+            #tablero{
+                width:100%;
+                height:100%;
+                pointer-events:none;
+                transform:translateX(0px) translateY(0px) rotateX(60deg) rotateY(0deg) rotateZ(-45deg)
+            }
+			.celda{
+                border-bottom:1px solid grey;
+                border-left:1px solid grey;
+                float:left;
+                box-sizing:border-box;
+				position:absolute;
+            }
+			.seleccionable{
+			transition:all 1s;
+			}
+			.seleccionable:hover{
+				background:rgb(220,220,220);
+			}
+			
+            .grande{
+                border-bottom:2px solid black;
+                border-left:2px solid black;
+            }
+            .pagina{
+                width:99%;
+                height:90%;
+                overflow:hidden;
+                border:2px solid black;
+                box-sizing:border-box;
+                position:relative;
+				position:absolute;
+				top:0px;
+				left:0px;
+            }
+            .interior{
+                width:160%;
+                height:160%;
+                /*overflow:hidden;*/
+                transform: translateX(0px) translateY(-100px) rotateX(-60deg) rotateY(0deg) rotateZ(-45deg);
+            }
+            .pequenos,.grandes{
+                position:absolute;
+                top:0px;
+                left:0px;
+                
+                width:160%;
+                height:160%;
+				transition:all 1s;
+            }
+			img{
+				box-shadow:0px 5px 10px rgba(0,0,0,0.3);
+			}
+			iframe{
+				position:absolute;
+				top:0px;
+				left:0px;
+				transform: translateX(100px) translateY(0px) rotateX(30deg) rotateY(-45deg) rotateZ(0deg);
+				box-shadow: 0px 5px 10px black;
+			}
+			[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 150px;
+    display: block;
+    background: #FFF;
+    padding: 10px;
+    top: -50px;
+    box-shadow: 0px 2px 5px #0000008c;
+    border-radius: 3px;
+    text-align: center;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all .3s cubic-bezier(.4, 0, .2, 1);
+}
+.blur{
+	display:none;
+}
+.bocadillo{
+	    width: 100px;
+    height: 50px;
+    font-size: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0px;
+    position: absolute;
+    top: -41px;
+    left: 30px;
+}
+.nombre{
+		    width: 50px;
+    height: 10px;
+    font-size: 10px;
+    background: black;
+	color:white;
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    top: -50px;
+    left: 0px;
+}
